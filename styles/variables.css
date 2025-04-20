@@ -7,7 +7,7 @@
   --title-weight: 700;
   --text-variable: "wght" var(--text-weight);
   --title-variable: "wght" var(--title-weight);
-/* main colors */
+  /* main colors */
   --bg-color: #fff;
   --text-color: #000;
   --accent-color: #000;
