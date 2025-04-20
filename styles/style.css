@@ -138,9 +138,11 @@
   background: var(--bg-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-  overflow: hidden;
 }
 
+.button__card {
+  color: var(--button-text);
+}
 .button::before {
   content: "";
   position: absolute;
@@ -166,7 +168,7 @@
 }
 
 .button:hover svg {
-  color: var(--accent-color);
+  color: var(--button-text);
 }
 
 /* Like button specific styles */
