@@ -15,7 +15,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: var(--text-variable);
+  font-variation-settings: "wght" var(--text-variable);
   background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3 0 2px,
@@ -327,18 +327,17 @@
   .button:hover svg {
     color: #fff;
   }
-  
+
   .card__like-button .button__text {
     mix-blend-mode: normal;
     color: #000;
   }
-  
+
   .card__like-button:hover .button__text {
     mix-blend-mode: difference;
     color: #fff;
   }
 }
-
 
 /* dialog styling */
 
