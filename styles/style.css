@@ -43,7 +43,7 @@
   color: var(--text-color);
   text-transform: uppercase;
   margin-bottom: 100px;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
 }
 
 .header__logo {
@@ -70,7 +70,7 @@
 
 /* Card styles */
 .card {
-  background-color: #fff;
+  background-color: var(--bg-color, #fff);
   border: 2px solid #000000;
   font-family: var(--main-font);
 }
@@ -101,7 +101,7 @@
   top: 25px;
   right: 13px;
   opacity: 0.5;
-  color: var(--watermark-color);
+  color: var(--watermark-color, #000);
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
@@ -137,7 +137,7 @@
   justify-content: center;
   align-items: center;
   border: 2px solid #000;
-  background: var(--bg-color);
+  background: var(--bg-color, #fff);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   font-family: var(--accent-font);
@@ -148,7 +148,7 @@
 }
 
 .button__card {
-  color: var(--button-text);
+  color: var(--button-text, #fff);
 }
 
 .button::before {
@@ -158,12 +158,12 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   transition: width 0.5s ease-in-out;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px var(--accent-color);
+  box-shadow: 2px 2px var(--accent-color, #000);
   outline: none;
 }
 
@@ -174,13 +174,13 @@
 .button svg {
   /*transition: color 0.5s ease-in-out;*/
   mix-blend-mode: difference;
-  color: var(--button-text);
+  color: var(--button-text, #fff);
   position: relative;
   z-index: 1;
 }
 
 .button:hover svg {
-  color: var(--button-text);
+  color: var(--button-text, #fff);
 }
 
 /* Like button specific styles */
@@ -236,7 +236,7 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
-  color: var(--button-text);
+  color: var(--button-text, #fff);
 }
 
 /* Save button styles */
@@ -352,14 +352,14 @@ dialog::backdrop {
   min-width: 341px;
   border: 2px solid var(--bg-color);
   padding: 30px;
-  background: var(--bg-color);
+  background: var(--bg-color, #fff);
 }
 
 .dialog__card {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: var(--text-color);
+  color: var(--text-color, #000);
 }
 
 .dialog__attention {
