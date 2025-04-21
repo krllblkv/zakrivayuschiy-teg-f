@@ -14,8 +14,9 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  width: calc(100vw * (700 / 1440));
   font-family: var(--main-font);
-  font-variation-settings: "wght" var(--text-variable);
+  font-variation-settings: "wght" var(--text-weight);
   background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3 0 2px,
@@ -27,6 +28,7 @@
   background-size: cover;
   background-attachment: fixed;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Header styles */
@@ -74,7 +76,7 @@
 }
 
 .card__title {
-  font-variation-settings: "wght" 785;
+  font-variation-settings: "wght" var(--title-weight);
   font-size: 18px;
   padding: 4px 10px 6px;
 }
@@ -117,7 +119,7 @@
   padding: 25px;
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: "wght" 465;
+  font-variation-settings: "wght" var(--text-weight);
 }
 
 .card__button {
@@ -138,11 +140,17 @@
   background: var(--bg-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  font-size: 14px;
+  min-height: 38px;
+  padding: 9px 17px;
 }
 
 .button__card {
   color: var(--button-text);
 }
+
 .button::before {
   content: "";
   position: absolute;
@@ -164,7 +172,11 @@
 }
 
 .button svg {
-  transition: color 0.5s ease-in-out;
+  /*transition: color 0.5s ease-in-out;*/
+  mix-blend-mode: difference;
+  color: var(--button-text);
+  position: relative;
+  z-index: 1;
 }
 
 .button:hover svg {
@@ -174,19 +186,12 @@
 /* Like button specific styles */
 .card__like-button {
   width: 130px;
-  min-height: 38px;
-  padding: 9px 17px;
 }
 
 .card__like-button .button__text {
   position: relative;
   z-index: 1;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.card__like-button:hover .button__text {
-  color: #fff;
+  mix-blend-mode: difference;
 }
 
 /* Icon button styles */
@@ -227,23 +232,18 @@
 
 /* Button text styles */
 .button__text {
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 14px;
   line-height: 90%;
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--button-text);
 }
 
 /* Save button styles */
 .save__button {
-  gap: 8px;
-  min-height: 80px;
+  gap: 10px;
+  min-height: 55px;
   padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   margin: auto;
 }
 
@@ -374,10 +374,5 @@ dialog::backdrop {
 }
 
 .dialog__button {
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   width: 100%;
-  min-height: 38px;
-  padding: 9px 17px;
 }
