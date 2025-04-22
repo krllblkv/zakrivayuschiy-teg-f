@@ -99,7 +99,7 @@
 .card__decorative-element {
   position: absolute;
   top: 25px;
-  right: 13px;
+  right: 25px;
   opacity: 0.5;
   color: var(--watermark-color, #000);
   font-family: var(--accent-font);
@@ -298,6 +298,11 @@
 
   .dialog {
     padding: 30px 40px;
+  }
+
+  .card__decorative-element {
+    top: 25px;
+    right: 13px;
   }
 }
 
